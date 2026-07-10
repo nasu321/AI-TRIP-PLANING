@@ -56,6 +56,39 @@ st.markdown("""
     Real open datasets powering the AI Travel Platform</p>
 </div>""", unsafe_allow_html=True)
 
+# ── Auto-Start Backend (Cloud Failsafe) ───────────────────────────────────────
+import socket
+import subprocess
+import sys
+import os
+import time
+
+def is_port_in_use(port):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        return s.connect_ex(('127.0.0.1', port)) == 0
+
+if not is_port_in_use(8000):
+    backend_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'backend'))
+    if backend_path not in sys.path:
+        sys.path.append(backend_path)
+    
+    log_file = os.path.join(backend_path, "backend_cloud.log")
+    with open(log_file, "w") as log_f:
+        subprocess.Popen(
+            [sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "8000"],
+            cwd=backend_path,
+            stdout=log_f,
+            stderr=subprocess.STDOUT
+        )
+    time.sleep(5)
+    if not is_port_in_use(8000):
+        try:
+            with open(log_file, "r") as f:
+                err = f.read()
+            st.error(f"Backend failed to start! Log:\n```text\n{err}\n```")
+        except:
+            st.error("Backend failed to start and logs are unreadable.")
+
 # ── Fetch DB info ─────────────────────────────────────────────────────────────
 @st.cache_data(ttl=300)
 def fetch_db_info():
