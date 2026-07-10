@@ -4,7 +4,27 @@ Premium dark-mode dashboard with multi-page navigation.
 """
 import streamlit as st
 import os
+import sys
+import time
+import socket
+import subprocess
 from pathlib import Path
+
+def is_port_in_use(port):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        return s.connect_ex(('127.0.0.1', port)) == 0
+
+# Start backend if not running
+if not is_port_in_use(8000):
+    backend_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend'))
+    sys.path.append(backend_path)
+    # Start the FastAPI server in the background
+    subprocess.Popen(
+        [sys.executable, "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"],
+        cwd=backend_path
+    )
+    # Give it a moment to boot up
+    time.sleep(3)
 
 # ─── Page Config (must be first Streamlit call) ──────────────
 st.set_page_config(
