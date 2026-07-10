@@ -177,17 +177,54 @@ if submitted:
                 time.sleep(0.3)
                 progress_bar.progress(pct, text=msg)
 
+            # Auto-start backend if not running (failsafe for Streamlit Cloud)
+            import socket
+            import subprocess
+            import sys
+            import os
+            def is_port_in_use(port):
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                    return s.connect_ex(('127.0.0.1', port)) == 0
+
+            if not is_port_in_use(8000):
+                progress_bar.progress(98, text="🚀 Starting backend server on cloud...")
+                backend_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'backend'))
+                sys.path.append(backend_path)
+                
+                log_file = os.path.join(backend_path, "backend_cloud.log")
+                with open(log_file, "w") as log_f:
+                    subprocess.Popen(
+                        [sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "8000"],
+                        cwd=backend_path,
+                        stdout=log_f,
+                        stderr=subprocess.STDOUT
+                    )
+                import time
+                time.sleep(5) # Wait for backend to fully boot
+                
+                if not is_port_in_use(8000):
+                    # It failed to start! Let's read the log and show it to the user.
+                    try:
+                        with open(log_file, "r") as f:
+                            error_log = f.read()
+                        st.error(f"Backend failed to start on cloud! Error Log:\n\n```text\n{error_log}\n```")
+                    except Exception as e:
+                        st.error("Backend failed to start on cloud, and log file could not be read.")
+            
             # Make API call
             with st.spinner(""):
-                response = requests.post(
-                    f"{BACKEND_URL}/api/trips/plan",
-                    json=payload,
-                    timeout=120,
-                )
+                try:
+                    response = requests.post(
+                        f"{BACKEND_URL}/api/trips/plan",
+                        json=payload,
+                        timeout=120,
+                    )
+                except requests.exceptions.ConnectionError:
+                    response = None
 
             progress_bar.progress(100, text="✅ All agents complete!")
 
-            if response.status_code == 200:
+            if response and response.status_code == 200:
                 result = response.json()
                 st.session_state.trip_result = result
                 st.session_state.trip_destination = destination
@@ -259,8 +296,10 @@ if submitted:
                 </div>
                 """, unsafe_allow_html=True)
 
-            else:
+            elif response:
                 st.error(f"❌ API Error {response.status_code}: {response.text}")
+            else:
+                st.error("❌ Cannot connect to backend. The backend auto-launcher failed or is still starting up.")
 
         except requests.exceptions.ConnectionError:
             st.error(
