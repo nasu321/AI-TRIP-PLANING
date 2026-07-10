@@ -32,7 +32,7 @@ p,label,span{color:#cbd5e1;}
 .stExpander{background:rgba(22,33,62,0.6);border-radius:12px;border:1px solid rgba(255,255,255,0.08);}
 </style>""", unsafe_allow_html=True)
 
-BACKEND_URL = st.session_state.get("backend_url", "http://localhost:8000")
+BACKEND_URL = st.session_state.get("backend_url", "http://127.0.0.1:8000")
 SESSION_ID  = st.session_state.get("session_id", "demo")
 
 # ── Section header helper ─────────────────────────────────────────────────────

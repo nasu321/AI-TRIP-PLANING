@@ -113,7 +113,7 @@ if "trip_result" not in st.session_state:
     st.session_state.trip_result = None
 
 if "backend_url" not in st.session_state:
-    st.session_state.backend_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+    st.session_state.backend_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
 
 # ─── Sidebar ──────────────────────────────────────────────────
 with st.sidebar:

@@ -32,7 +32,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 result = st.session_state.get("trip_result")
-BACKEND_URL = st.session_state.get("backend_url", "http://localhost:8000")
+BACKEND_URL = st.session_state.get("backend_url", "http://127.0.0.1:8000")
 SESSION_ID = st.session_state.get("session_id", "demo")
 
 if not result:

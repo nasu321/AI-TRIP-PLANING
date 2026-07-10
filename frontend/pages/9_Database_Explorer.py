@@ -31,7 +31,7 @@ p,label,span,div{color:#cbd5e1;}
 .stDataFrame{border-radius:12px;overflow:hidden;}
 </style>""", unsafe_allow_html=True)
 
-BACKEND_URL = st.session_state.get("backend_url", "http://localhost:8000")
+BACKEND_URL = st.session_state.get("backend_url", "http://127.0.0.1:8000")
 
 
 def sec(icon, title, sub=""):
@@ -103,7 +103,7 @@ def fetch_db_info():
 db_info = fetch_db_info()
 
 if not db_info:
-    st.error("⚠️ Cannot reach backend. Make sure it's running on http://localhost:8000")
+    st.error("⚠️ Cannot reach backend. Make sure it's running on http://127.0.0.1:8000")
     st.stop()
 
 stats    = db_info.get("stats", {})

@@ -26,7 +26,7 @@ p, label { color: #cbd5e1; }
 div[data-testid="stMetricValue"] { color: #7c3aed !important; font-size: 1.6rem !important; }
 </style>""", unsafe_allow_html=True)
 
-BACKEND_URL = st.session_state.get("backend_url", "http://localhost:8000")
+BACKEND_URL = st.session_state.get("backend_url", "http://127.0.0.1:8000")
 SESSION_ID = st.session_state.get("session_id", "demo")
 
 st.markdown("""
