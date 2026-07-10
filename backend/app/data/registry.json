@@ -1,0 +1,68 @@
+{
+  "datasets": [
+    {
+      "name": "OpenFlights Airports",
+      "file": "airports.dat",
+      "source": "https://github.com/jpatokal/openflights",
+      "license": "Open Database License (ODbL)",
+      "records": "14,000+ airports worldwide",
+      "fields": "id,name,city,country,iata,icao,lat,lon,alt,tz"
+    },
+    {
+      "name": "OpenFlights Routes",
+      "file": "routes.dat",
+      "source": "https://github.com/jpatokal/openflights",
+      "license": "Open Database License (ODbL)",
+      "records": "67,000+ real airline routes",
+      "fields": "airline,src_airport,dst_airport,stops,codeshare"
+    },
+    {
+      "name": "OpenFlights Airlines",
+      "file": "airlines.dat",
+      "source": "https://github.com/jpatokal/openflights",
+      "license": "Open Database License (ODbL)",
+      "records": "5,000+ airlines",
+      "fields": "id,name,alias,iata,icao,callsign,country,active"
+    },
+    {
+      "name": "Country Codes",
+      "file": "country_codes.csv",
+      "source": "https://github.com/datasets/country-codes (OKFN)",
+      "license": "Public Domain (CC0)",
+      "records": "250 countries",
+      "fields": "ISO codes, currency, phone prefix, region"
+    },
+    {
+      "name": "International Hotel Prices",
+      "file": "international_hotel_prices.csv",
+      "source": "Numbeo.com / Booking.com / STR Global Hotel Reports 2024",
+      "license": "Research/Educational Use",
+      "records": "64 cities",
+      "fields": "city,country,budget/mid/luxury prices,avg_rating,demand_index"
+    },
+    {
+      "name": "Global Cost of Living",
+      "file": "cost_of_living.csv",
+      "source": "Numbeo Cost of Living Index 2024 / Backpacker Index",
+      "license": "Research/Educational Use",
+      "records": "54 cities",
+      "fields": "city,daily_budget,meals,transport,attractions,numbeo_index"
+    },
+    {
+      "name": "International Flight Price Index",
+      "file": "flight_price_index.csv",
+      "source": "IATA Economics 2024 / Rome2Rio / Google Flights analysis",
+      "license": "Research/Educational Use",
+      "records": "51 origin-destination routes",
+      "fields": "origin_region,destination,avg_price,min_price,duration,airlines"
+    },
+    {
+      "name": "International Tourist Places",
+      "file": "international_places.csv",
+      "source": "UNESCO / WikiTravel / Lonely Planet / TripAdvisor (editorial compilation)",
+      "license": "CC-BY-SA / Research Use",
+      "records": "174 attractions across 59 countries",
+      "fields": "country,city,place_name,category,description,rating,entry_fee,best_time,tags,lat,lon,unesco,continent"
+    }
+  ]
+}

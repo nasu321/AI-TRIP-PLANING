@@ -1,0 +1,314 @@
+/* ============================================================
+   Agentic AI Travel Platform — Global Streamlit Styles
+   Dark mode, glassmorphism, premium design
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* ── CSS Variables ─────────────────────────────────────── */
+:root {
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #e94560;
+  --accent-2: #f5a623;
+  --purple: #7c3aed;
+  --teal: #0ea5e9;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(22, 33, 62, 0.8);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --radius: 16px;
+  --radius-sm: 8px;
+}
+
+/* ── Base & Typography ───────────────────────────────────── */
+html, body, [class*="css"] {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--primary); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+/* ── Metric Cards ────────────────────────────────────────── */
+.metric-card {
+  background: linear-gradient(135deg, rgba(22, 33, 62, 0.9), rgba(26, 26, 46, 0.9));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 12px;
+}
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.metric-card .metric-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+.metric-card .metric-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* ── Travel Score Ring ───────────────────────────────────── */
+.score-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #0f0c29 50%, var(--secondary) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.score-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(233, 69, 96, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+.score-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5a623, #e94560);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.score-label {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+/* ── Hotel Cards ─────────────────────────────────────────── */
+.hotel-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.hotel-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(233, 69, 96, 0.15);
+}
+.hotel-card.top-pick::before {
+  content: '⭐ TOP PICK';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+/* ── Score Bars ──────────────────────────────────────────── */
+.score-bar-container { margin: 4px 0; }
+.score-bar-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+.score-bar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--accent));
+  transition: width 0.8s ease;
+}
+
+/* ── Weather Cards ───────────────────────────────────────── */
+.weather-card {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(124, 58, 237, 0.1));
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 16px 12px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.weather-card:hover { transform: translateY(-2px); }
+.weather-icon { font-size: 2rem; }
+.weather-temp {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.weather-day {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+/* ── Flight Cards ────────────────────────────────────────── */
+.flight-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s;
+}
+.flight-card.cheapest { border-color: var(--success); }
+.flight-card:hover { border-color: var(--teal); }
+.flight-airline { font-weight: 600; color: var(--text-primary); }
+.flight-price {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+/* ── Budget Bars ─────────────────────────────────────────── */
+.budget-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+  padding: 12px;
+  background: var(--glass-bg);
+  border-radius: var(--radius-sm);
+}
+.budget-category { flex: 1; font-size: 0.9rem; color: var(--text-primary); }
+.budget-amount { font-weight: 600; color: var(--accent-2); min-width: 80px; text-align: right; }
+
+/* ── Section Headers ─────────────────────────────────────── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent);
+}
+.section-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ── Persona Badge ───────────────────────────────────────── */
+.persona-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--purple), var(--accent));
+  color: white;
+  padding: 8px 18px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ── Tip Cards ───────────────────────────────────────────── */
+.tip-card {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(14, 165, 233, 0.1));
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* ── Itinerary Day ───────────────────────────────────────── */
+.itinerary-day {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.itinerary-day-header {
+  font-weight: 700;
+  color: var(--accent-2);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* ── Sentiment Meter ─────────────────────────────────────── */
+.sentiment-positive { color: var(--success); font-weight: 600; }
+.sentiment-negative { color: var(--accent); font-weight: 600; }
+
+/* ── Alert/Banner ────────────────────────────────────────── */
+.info-banner {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(124, 58, 237, 0.1));
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+/* ── Destination Hero ────────────────────────────────────── */
+.destination-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #0f0c29 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.destination-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f8fafc, var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 12px 0;
+}
+.destination-hero p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0;
+}

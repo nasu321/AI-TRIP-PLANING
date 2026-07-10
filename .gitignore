@@ -1,0 +1,8 @@
+Agentic-AI-Trip-Planner-master/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+*.db
+.DS_Store

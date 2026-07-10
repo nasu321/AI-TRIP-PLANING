@@ -1,0 +1,52 @@
+origin_region,destination_city,destination_country,destination_iata,avg_roundtrip_usd,min_price_usd,avg_duration_hours,airlines,source
+North America,Paris,France,CDG,650,420,8.5,"Air France,Delta,United",IATA 2024
+North America,London,UK,LHR,680,450,7.5,"British Airways,Virgin,Delta",IATA 2024
+North America,Tokyo,Japan,NRT,890,620,13.0,"JAL,ANA,United",IATA 2024
+North America,Dubai,UAE,DXB,780,540,13.5,"Emirates,Etihad,United",IATA 2024
+North America,Bali,Indonesia,DPS,1100,750,20.0,"Singapore Air,Cathay Pacific",IATA 2024
+North America,Bangkok,Thailand,BKK,950,680,18.0,"Thai Airways,EVA,Delta",IATA 2024
+North America,Singapore,Singapore,SIN,1000,720,18.5,"Singapore Air,Cathay Pacific",IATA 2024
+North America,Sydney,Australia,SYD,1100,780,18.0,"Qantas,United,Air NZ",IATA 2024
+North America,Rome,Italy,FCO,620,380,9.5,"Alitalia,Delta,American",IATA 2024
+North America,Barcelona,Spain,BCN,600,370,9.0,"Iberia,Delta,American",IATA 2024
+North America,Istanbul,Turkey,IST,700,440,10.5,"Turkish Airlines,Delta",IATA 2024
+North America,Mexico City,Mexico,MEX,380,220,3.5,"Aeromexico,United,American",IATA 2024
+North America,Cancun,Mexico,CUN,350,180,3.0,"Aeromexico,American,Delta",IATA 2024
+Europe,Paris,France,CDG,120,60,1.5,"Air France,EasyJet,Ryanair",IATA 2024
+Europe,London,UK,LHR,130,55,1.5,"British Airways,EasyJet,Ryanair",IATA 2024
+Europe,Tokyo,Japan,NRT,820,580,12.0,"JAL,ANA,Lufthansa",IATA 2024
+Europe,Dubai,UAE,DXB,520,320,7.0,"Emirates,Etihad,Lufthansa",IATA 2024
+Europe,Bali,Indonesia,DPS,850,600,15.0,"KLM,Lufthansa,Singapore Air",IATA 2024
+Europe,Bangkok,Thailand,BKK,700,480,11.5,"Thai Airways,Lufthansa,KLM",IATA 2024
+Europe,Singapore,Singapore,SIN,750,520,12.5,"Singapore Air,KLM,Lufthansa",IATA 2024
+Europe,Sydney,Australia,SYD,900,650,22.0,"Qantas,Etihad,Emirates",IATA 2024
+Europe,Istanbul,Turkey,IST,220,90,3.0,"Turkish Airlines,Ryanair",IATA 2024
+Europe,Cairo,Egypt,CAI,350,180,4.5,"EgyptAir,Lufthansa,Turkish",IATA 2024
+Europe,Marrakech,Morocco,RAK,250,100,3.5,"Royal Air Maroc,Ryanair",IATA 2024
+Asia,Paris,France,CDG,820,580,12.0,"Air France,Emirates,Singapore Air",IATA 2024
+Asia,London,UK,LHR,850,620,12.5,"British Airways,Singapore Air",IATA 2024
+Asia,Bali,Indonesia,DPS,280,150,4.5,"Garuda,AirAsia,Batik Air",IATA 2024
+Asia,Bangkok,Thailand,BKK,320,180,3.0,"Thai Airways,AirAsia",IATA 2024
+Asia,Singapore,Singapore,SIN,350,200,2.5,"Singapore Air,Scoot,AirAsia",IATA 2024
+Asia,Dubai,UAE,DXB,480,300,7.5,"Emirates,Etihad,IndiGo",IATA 2024
+Asia,Tokyo,Japan,NRT,400,250,5.0,"JAL,ANA,Korean Air",IATA 2024
+Asia,Seoul,South Korea,ICN,350,200,2.5,"Korean Air,Asiana,Jeju Air",IATA 2024
+Asia,Kuala Lumpur,Malaysia,KUL,200,90,2.0,"AirAsia,Malaysia Air",IATA 2024
+Asia,Maldives,Maldives,MLE,600,380,4.0,"Sri Lankan Air,Emirates",IATA 2024
+Middle East,Paris,France,CDG,520,320,7.0,"Emirates,Air France,Etihad",IATA 2024
+Middle East,London,UK,LHR,480,300,7.5,"Emirates,British Airways",IATA 2024
+Middle East,Bangkok,Thailand,BKK,420,260,6.5,"Emirates,Etihad,Thai",IATA 2024
+Middle East,Bali,Indonesia,DPS,550,350,9.0,"Emirates,Etihad,Garuda",IATA 2024
+Australia,Bali,Indonesia,DPS,350,200,5.5,"Jetstar,Garuda,AirAsia",IATA 2024
+Australia,Singapore,Singapore,SIN,450,280,8.0,"Singapore Air,Qantas",IATA 2024
+Australia,Bangkok,Thailand,BKK,550,350,9.0,"Thai Airways,Qantas",IATA 2024
+Australia,Tokyo,Japan,NRT,650,420,10.0,"JAL,Qantas,ANA",IATA 2024
+Australia,London,UK,LHR,1000,750,22.0,"Qantas,Emirates,Singapore Air",IATA 2024
+Australia,Paris,France,CDG,980,720,22.0,"Air France,Qantas,Emirates",IATA 2024
+South America,Miami,USA,MIA,350,180,4.5,"American,LATAM,Copa",IATA 2024
+South America,New York,USA,JFK,420,240,9.0,"American,LATAM,Delta",IATA 2024
+South America,London,UK,LHR,780,520,14.0,"British Airways,LATAM",IATA 2024
+South America,Paris,France,CDG,800,540,13.5,"Air France,LATAM",IATA 2024
+Africa,Dubai,UAE,DXB,450,280,7.5,"Emirates,Kenya Airways",IATA 2024
+Africa,London,UK,LHR,550,350,9.5,"British Airways,Kenya Air",IATA 2024
+Africa,Paris,France,CDG,520,320,8.5,"Air France,Kenya Airways",IATA 2024

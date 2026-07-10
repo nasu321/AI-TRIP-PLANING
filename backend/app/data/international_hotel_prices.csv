@@ -1,0 +1,65 @@
+city,country,budget_hotel_usd,mid_hotel_usd,luxury_hotel_usd,avg_rating,demand_index,source
+Paris,France,89,180,420,4.3,95,Numbeo/Booking.com 2024
+London,UK,95,220,480,4.2,97,Numbeo/Booking.com 2024
+New York,USA,120,280,600,4.1,98,STR Global 2024
+Tokyo,Japan,55,160,380,4.6,94,Numbeo/Jalan.net 2024
+Dubai,UAE,70,200,500,4.5,93,Numbeo/Booking.com 2024
+Bali,Indonesia,25,95,250,4.7,89,Numbeo/Agoda 2024
+Bangkok,Thailand,18,65,180,4.5,91,Numbeo/Agoda 2024
+Singapore,Singapore,85,200,450,4.4,96,STR Global 2024
+Sydney,Australia,90,220,480,4.2,88,Numbeo/Booking.com 2024
+Rome,Italy,60,150,380,4.2,92,Numbeo/Booking.com 2024
+Barcelona,Spain,55,140,340,4.3,93,Numbeo/Booking.com 2024
+Amsterdam,Netherlands,80,190,420,4.1,94,Numbeo/Booking.com 2024
+Istanbul,Turkey,30,80,200,4.4,90,Numbeo/Booking.com 2024
+Prague,Czech Rep.,35,90,220,4.5,91,Numbeo/Booking.com 2024
+Vienna,Austria,70,160,360,4.4,92,Numbeo/Booking.com 2024
+Zurich,Switzerland,130,280,600,4.3,89,STR Global 2024
+Berlin,Germany,55,130,320,4.2,91,Numbeo/Booking.com 2024
+Madrid,Spain,50,130,320,4.3,92,Numbeo/Booking.com 2024
+Lisbon,Portugal,45,110,270,4.5,93,Numbeo/Booking.com 2024
+Athens,Greece,40,100,250,4.4,88,Numbeo/Booking.com 2024
+Cairo,Egypt,20,55,150,4.0,75,Numbeo/Booking.com 2024
+Marrakech,Morocco,22,60,180,4.4,82,Numbeo/Booking.com 2024
+Cape Town,South Africa,30,90,240,4.5,85,Numbeo/Booking.com 2024
+Nairobi,Kenya,25,70,180,4.1,70,Numbeo/Booking.com 2024
+Mumbai,India,20,60,160,4.2,88,Numbeo/MakeMyTrip 2024
+Delhi,India,18,55,150,4.0,87,Numbeo/MakeMyTrip 2024
+Goa,India,20,70,200,4.5,85,Numbeo/MakeMyTrip 2024
+Colombo,Sri Lanka,22,65,170,4.3,78,Numbeo/Booking.com 2024
+Kathmandu,Nepal,15,45,120,4.3,72,Numbeo/Booking.com 2024
+Beijing,China,35,100,260,4.1,86,Numbeo/Ctrip 2024
+Shanghai,China,40,120,300,4.2,91,Numbeo/Ctrip 2024
+Hong Kong,China,80,200,450,4.0,90,STR Global 2024
+Seoul,South Korea,45,120,280,4.4,92,Numbeo/Booking.com 2024
+Kuala Lumpur,Malaysia,22,65,160,4.5,88,Numbeo/Agoda 2024
+Phuket,Thailand,25,80,220,4.6,90,Numbeo/Agoda 2024
+Ho Chi Minh,Vietnam,18,55,150,4.5,87,Numbeo/Agoda 2024
+Hanoi,Vietnam,15,45,130,4.5,84,Numbeo/Agoda 2024
+Siem Reap,Cambodia,15,40,110,4.6,80,Numbeo/Agoda 2024
+Yangon,Myanmar,20,55,140,4.2,68,Numbeo/Agoda 2024
+Manila,Philippines,22,65,170,4.1,82,Numbeo/Agoda 2024
+Mexico City,Mexico,30,80,200,4.2,84,Numbeo/Booking.com 2024
+Cancun,Mexico,35,110,290,4.5,91,STR Global 2024
+Buenos Aires,Argentina,25,65,170,4.3,76,Numbeo/Booking.com 2024
+Rio de Janeiro,Brazil,30,85,220,4.2,83,Numbeo/Booking.com 2024
+Lima,Peru,22,60,160,4.3,75,Numbeo/Booking.com 2024
+Bogota,Colombia,25,65,170,4.1,72,Numbeo/Booking.com 2024
+Toronto,Canada,90,200,440,4.1,87,STR Global 2024
+Vancouver,Canada,85,190,420,4.2,88,STR Global 2024
+Los Angeles,USA,100,240,520,4.0,90,STR Global 2024
+Miami,USA,95,220,490,4.1,92,STR Global 2024
+Las Vegas,USA,60,160,400,4.3,95,STR Global 2024
+Reykjavik,Iceland,95,200,420,4.4,85,Numbeo/Booking.com 2024
+Oslo,Norway,110,240,500,4.2,83,Numbeo/Booking.com 2024
+Stockholm,Sweden,95,210,440,4.3,86,Numbeo/Booking.com 2024
+Copenhagen,Denmark,100,220,460,4.2,87,Numbeo/Booking.com 2024
+Helsinki,Finland,85,190,400,4.3,84,Numbeo/Booking.com 2024
+Maldives,Maldives,150,400,1200,4.9,94,STR Global 2024
+Santorini,Greece,90,250,650,4.8,93,Numbeo/Booking.com 2024
+Seychelles,Seychelles,120,350,900,4.8,88,STR Global 2024
+Mauritius,Mauritius,80,220,580,4.7,86,STR Global 2024
+Zanzibar,Tanzania,40,120,320,4.7,82,Numbeo/Booking.com 2024
+Kyoto,Japan,60,170,400,4.7,91,Numbeo/Jalan.net 2024
+Osaka,Japan,50,140,340,4.6,90,Numbeo/Jalan.net 2024
+Taipei,Taiwan,45,120,280,4.5,89,Numbeo/Booking.com 2024

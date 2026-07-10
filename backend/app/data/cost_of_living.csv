@@ -1,0 +1,55 @@
+city,country,daily_backpacker,daily_mid,daily_luxury,meal_cheap,meal_mid,meal_fine,local_transport_day,attraction_avg,numbeo_index,source
+Paris,France,65,160,380,12,30,90,12,20,76,Numbeo 2024
+London,UK,75,180,420,14,35,100,15,22,72,Numbeo 2024
+New York,USA,90,220,500,16,40,120,15,25,100,Numbeo 2024
+Tokyo,Japan,50,130,320,8,22,70,8,15,69,Numbeo 2024
+Dubai,UAE,60,160,400,10,28,85,10,20,63,Numbeo 2024
+Bali,Indonesia,25,70,180,3,10,35,5,8,29,Numbeo 2024
+Bangkok,Thailand,20,60,160,2,8,30,4,7,27,Numbeo 2024
+Singapore,Singapore,70,180,420,7,20,70,9,18,82,Numbeo 2024
+Sydney,Australia,80,190,440,14,32,95,12,20,84,Numbeo 2024
+Rome,Italy,55,140,340,10,28,85,8,18,66,Numbeo 2024
+Barcelona,Spain,50,130,310,9,25,80,8,16,61,Numbeo 2024
+Amsterdam,Netherlands,65,160,380,11,30,90,10,20,70,Numbeo 2024
+Istanbul,Turkey,25,70,180,3,9,30,4,8,24,Numbeo 2024
+Prague,Czech Rep.,30,80,200,5,13,40,5,10,40,Numbeo 2024
+Vienna,Austria,60,150,360,11,28,85,9,18,68,Numbeo 2024
+Zurich,Switzerland,100,250,580,18,45,130,14,25,117,Numbeo 2024
+Berlin,Germany,45,120,300,9,22,70,8,15,60,Numbeo 2024
+Madrid,Spain,45,120,300,8,22,70,7,15,57,Numbeo 2024
+Lisbon,Portugal,40,100,260,7,18,60,6,12,50,Numbeo 2024
+Athens,Greece,38,95,240,7,18,60,6,12,47,Numbeo 2024
+Cairo,Egypt,18,45,120,2,6,20,3,5,19,Numbeo 2024
+Marrakech,Morocco,20,52,140,3,8,25,3,7,22,Numbeo 2024
+Cape Town,South Africa,25,70,190,4,11,38,5,9,30,Numbeo 2024
+Mumbai,India,18,50,140,2,6,22,3,5,21,Numbeo 2024
+Delhi,India,15,45,130,2,5,20,3,5,19,Numbeo 2024
+Goa,India,22,60,160,3,8,28,4,7,24,Numbeo 2024
+Colombo,Sri Lanka,20,55,150,3,7,25,4,6,22,Numbeo 2024
+Kathmandu,Nepal,14,40,110,2,5,18,3,5,17,Numbeo 2024
+Beijing,China,30,80,210,4,12,40,5,10,40,Numbeo 2024
+Shanghai,China,35,95,240,5,14,45,6,12,46,Numbeo 2024
+Hong Kong,China,70,175,420,8,22,70,9,18,79,Numbeo 2024
+Seoul,South Korea,40,110,270,6,16,55,7,13,51,Numbeo 2024
+Kuala Lumpur,Malaysia,22,60,160,3,9,30,4,7,28,Numbeo 2024
+Phuket,Thailand,25,72,190,3,9,32,4,8,29,Numbeo 2024
+Ho Chi Minh,Vietnam,18,52,145,2,6,22,3,6,22,Numbeo 2024
+Hanoi,Vietnam,16,48,135,2,5,20,3,5,21,Numbeo 2024
+Singapore,Singapore,70,180,420,7,20,70,9,18,82,Numbeo 2024
+Manila,Philippines,20,58,155,2,7,24,4,6,23,Numbeo 2024
+Mexico City,Mexico,25,68,180,3,9,30,4,7,27,Numbeo 2024
+Cancun,Mexico,35,100,270,5,14,48,6,12,42,Numbeo 2024
+Buenos Aires,Argentina,22,60,165,3,8,28,4,7,25,Numbeo 2024
+Rio de Janeiro,Brazil,28,78,210,4,11,38,5,9,30,Numbeo 2024
+Toronto,Canada,75,185,430,13,32,95,12,20,80,Numbeo 2024
+Vancouver,Canada,72,180,420,12,30,90,11,19,78,Numbeo 2024
+Los Angeles,USA,85,210,480,14,35,105,12,22,91,Numbeo 2024
+Miami,USA,80,200,460,13,33,100,11,21,88,Numbeo 2024
+Reykjavik,Iceland,85,200,460,18,40,120,10,20,96,Numbeo 2024
+Oslo,Norway,95,230,530,20,45,130,14,22,110,Numbeo 2024
+Stockholm,Sweden,80,200,460,16,38,115,12,20,100,Numbeo 2024
+Maldives,Maldives,80,250,900,15,40,150,10,30,95,Numbeo 2024
+Santorini,Greece,70,220,700,12,35,120,8,25,78,Numbeo 2024
+Kyoto,Japan,55,145,340,8,22,70,8,16,69,Numbeo 2024
+Osaka,Japan,50,135,320,7,20,65,8,14,67,Numbeo 2024
+Taipei,Taiwan,38,100,250,5,14,45,6,12,48,Numbeo 2024
