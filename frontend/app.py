@@ -180,6 +180,18 @@ with st.sidebar:
             API Docs: <a href='{backend_url}/docs' target='_blank' style='color:#e94560;'>{backend_url}/docs</a>
         </div>
         """, unsafe_allow_html=True)
+        
+    with st.expander("🛠️ Debug Logs"):
+        log_path = os.path.join(os.path.dirname(__file__), '..', 'backend', 'backend_cloud.log')
+        if os.path.exists(log_path):
+            try:
+                with open(log_path, "r", encoding="utf-8") as f:
+                    logs = f.read()
+                st.code(logs[-2000:] if len(logs) > 2000 else logs, language="text")
+            except Exception as e:
+                st.error(f"Could not read logs: {e}")
+        else:
+            st.info("No backend_cloud.log found.")
 
 # ─── Main Home Page ───────────────────────────────────────────
 st.markdown("""

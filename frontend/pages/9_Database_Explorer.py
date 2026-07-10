@@ -103,7 +103,14 @@ def fetch_db_info():
 db_info = fetch_db_info()
 
 if not db_info:
-    st.error("⚠️ Cannot reach backend. Make sure it's running on http://127.0.0.1:8505")
+    log_path = os.path.join(os.path.dirname(__file__), "..", "..", "backend", "backend_cloud.log")
+    logs = "No log found."
+    if os.path.exists(log_path):
+        try:
+            with open(log_path, "r", encoding="utf-8") as f:
+                logs = f.read()
+        except: pass
+    st.error(f"⚠️ Cannot reach backend. Make sure it\'s running on {BACKEND_URL}\n\n**Backend Logs:**\n```text\n{logs[-1500:]}\n```")
     st.stop()
 
 stats    = db_info.get("stats", {})

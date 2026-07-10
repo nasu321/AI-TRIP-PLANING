@@ -282,30 +282,103 @@ if submitted:
 
                 st.success("✅ Trip plan ready! Navigate to the pages below to explore your results.")
 
-                # Quick links
-                st.markdown("""
-                <div class='info-banner'>
-                    <strong>📍 Explore your results:</strong>
-                    Use the sidebar to navigate to
-                    <strong>🏨 Recommendations</strong>,
-                    <strong>📊 Budget Analytics</strong>,
-                    <strong>🌤️ Weather Intel</strong>,
-                    <strong>✈️ Flight Intel</strong>,
-                    <strong>📄 Reports</strong>, and
-                    <strong>👤 My Profile</strong>.
+                st.session_state.session_id = result.get("session_id", st.session_state.session_id)
+                progress_bar.progress(1.0)
+                # status_text.markdown("✅ **All agents complete!**")
+                time.sleep(0.5)
+                # st.rerun()
+            elif response:
+                try:
+                    err_detail = response.json().get("detail", response.text)
+                except:
+                    err_detail = response.text
+                st.error(f"❌ Backend returned an error ({response.status_code}): {err_detail}")
+            else:
+                log_path = os.path.join(os.path.dirname(__file__), '..', '..', 'backend', 'backend_cloud.log')
+                logs = "No log found."
+                if os.path.exists(log_path):
+                    try:
+                        with open(log_path, "r", encoding="utf-8") as f:
+                            logs = f.read()
+                    except: pass
+                st.error(f"❌ Cannot connect to backend. The backend auto-launcher failed or is still starting up.\n\n**Backend Logs:**\n```text\n{logs[-1500:]}\n```")
+
+            # Update agent status cards to complete
+            for i, (icon, name) in enumerate(agent_info):
+                agent_placeholders[i].markdown(f"""
+                <div style='text-align:center; background:rgba(16,185,129,0.1);
+                            border:1px solid rgba(16,185,129,0.4); border-radius:12px;
+                            padding:16px; margin-bottom:8px;'>
+                    <div style='font-size:1.8rem;'>{icon}</div>
+                    <div style='color:#10b981; font-size:0.8rem; font-weight:600; margin-top:4px;'>{name}</div>
+                    <div style='color:#10b981; font-size:0.7rem;'>✅ Done</div>
                 </div>
                 """, unsafe_allow_html=True)
 
-            elif response:
-                st.error(f"❌ API Error {response.status_code}: {response.text}")
-            else:
-                st.error("❌ Cannot connect to backend. The backend auto-launcher failed or is still starting up.")
+            # ── Results Display ──────────────────────────────
+            travel_score = result.get("travel_score", {})
+            score_total = travel_score.get("total", 0)
+            score_label = travel_score.get("label", "")
+
+            st.markdown(f"""
+            <div class='score-hero'>
+                <div style='color:#94a3b8; font-size:0.9rem; text-transform:uppercase;
+                            letter-spacing:0.1em; margin-bottom:8px;'>TRAVEL SCORE</div>
+                <div class='score-number'>{score_total:.0f}</div>
+                <div class='score-label'>{score_label}</div>
+                <div style='color:#64748b; font-size:0.85rem; margin-top:12px;'>
+                    {travel_score.get("explanation", "")}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            # Score breakdown
+            sc1, sc2, sc3, sc4, sc5 = st.columns(5)
+            score_dims = [
+                (sc1, "🌤️ Weather", travel_score.get("weather_score", 0)),
+                (sc2, "💰 Budget", travel_score.get("budget_score", 0)),
+                (sc3, "🏨 Hotels", travel_score.get("hotel_score", 0)),
+                (sc4, "💬 Sentiment", travel_score.get("sentiment_score", 0)),
+                (sc5, "✈️ Flights", travel_score.get("flight_score", 0)),
+            ]
+            for col, label, score in score_dims:
+                with col:
+                    color = "#10b981" if score >= 70 else "#f5a623" if score >= 55 else "#e94560"
+                    st.markdown(f"""
+                    <div style='text-align:center; background:rgba(22,33,62,0.7);
+                                border-radius:12px; padding:14px; border:1px solid rgba(255,255,255,0.08);'>
+                        <div style='font-size:0.8rem; color:#94a3b8;'>{label}</div>
+                        <div style='font-size:1.8rem; font-weight:700; color:{color};
+                                    font-family:Space Grotesk,sans-serif;'>{score:.0f}</div>
+                        <div style='font-size:0.7rem; color:#64748b;'>/100</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+            st.success("✅ Trip plan ready! Navigate to the pages below to explore your results.")
+
+            # Quick links
+            st.markdown("""
+            <div class='info-banner'>
+                <strong>📍 Explore your results:</strong>
+                Use the sidebar to navigate to
+                <strong>🏨 Recommendations</strong>,
+                <strong>📊 Budget Analytics</strong>,
+                <strong>🌤️ Weather Intel</strong>,
+                <strong>✈️ Flight Intel</strong>,
+                <strong>📄 Reports</strong>, and
+                <strong>👤 My Profile</strong>.
+            </div>
+            """, unsafe_allow_html=True)
 
         except requests.exceptions.ConnectionError:
-            st.error(
-                "❌ Cannot connect to backend. Make sure the FastAPI server is running:\n\n"
-                "`cd backend && uvicorn app.main:app --reload --port 8505`"
-            )
+            log_path = os.path.join(os.path.dirname(__file__), '..', '..', 'backend', 'backend_cloud.log')
+            logs = "No log found."
+            if os.path.exists(log_path):
+                try:
+                    with open(log_path, "r", encoding="utf-8") as f:
+                        logs = f.read()
+                except: pass
+            st.error(f"❌ Cannot connect to backend. The backend auto-launcher failed or is still starting up.\n\n**Backend Logs:**\n```text\n{logs[-1500:]}\n```")
         except Exception as e:
             st.error(f"❌ Unexpected error: {str(e)}")
 
